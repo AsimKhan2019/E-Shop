@@ -1,17 +1,19 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+// eslint-disable-next-line import/no-extraneous-dependencies, quotes
+import "jquery";
+// eslint-disable-next-line import/no-extraneous-dependencies, quotes
+import "popper.js/dist/umd/popper";
+// eslint-disable-next-line quotes
+import "boostrap/dist/js/bootstrap";
+// eslint-disable-next-line quotes
+import "bootstrap/dist/css/boostrap.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+/* eslint-disable linebreak-style */
+// eslint-disable-next-line no-unused-vars, linebreak-style
+const element = <div>Hello World</div>;
+ReactDOM.render(element, document.getElementById('root'));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// eslint-disable-next-line no-console
+console.log(element);
