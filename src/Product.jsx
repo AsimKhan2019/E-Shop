@@ -1,21 +1,30 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable spaced-comment */
+/* eslint-disable react/button-has-type */
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/jsx-one-expression-per-line */
+/* eslint-disable react/sort-comp */
+/* eslint-disable linebreak-style */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-multiple-empty-lines */
+
 import React, { Component } from "react";
 
 export default class Product extends Component {
   constructor(props) {
     super(props);
-
-    //console.log("Constructor - Product");
-
     this.state = {
       product: this.props.product,
     };
   }
 
   render() {
-    //console.log(this.props);
-
-    //console.log("render - Product");
-
     return (
       <div className="col-lg-6">
         <div className="card m-2">

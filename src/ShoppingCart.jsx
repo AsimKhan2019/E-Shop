@@ -1,3 +1,15 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-plusplus */
+/* eslint-disable prefer-const */
+/* eslint-disable no-var */
+/* eslint-disable max-len */
+/* eslint-disable react/button-has-type */
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/sort-comp */
+/* eslint-disable spaced-comment */
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
 import React, { Component } from "react";
 import Product from "./Product";
 
@@ -60,6 +72,7 @@ export default class ShoppingCart extends Component {
     //console.log("componentDidMount - ShoppingCart");
   };
 
+  // eslint-disable-next-line no-unused-vars
   componentDidUpdate(prevProps, prevState) {
     /*console.log(
       "componentDidUpdate - ShoppingCart",
