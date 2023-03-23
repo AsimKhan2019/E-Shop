@@ -1,48 +1,57 @@
-import React, { Component } from "react";
+/* eslint-disable linebreak-style */
+/* eslint-disable react/button-has-type */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable linebreak-style */
 
+import React, { Component } from 'react';
+
+// eslint-disable-next-line react/prefer-stateless-function
 export default class CustomersList extends Component {
+  // eslint-disable-next-line react/state-in-constructor
   state = {
-    pageTitle: "Customers",
+    pageTitle: 'Customers',
     customersCount: 5,
     customers: [
       {
         id: 1,
-        name: "Scott",
-        phone: "123-456",
-        address: { city: "New Delhi" },
-        photo: "https://picsum.photos/id/1010/60",
+        name: 'Scott',
+        phone: '123-456',
+        address: { city: 'New Delhi' },
+        photo: 'https://picsum.photos/id/1010/60',
       },
       {
         id: 2,
-        name: "Jones",
-        phone: "982-014",
-        address: { city: "New Jersy" },
-        photo: "https://picsum.photos/id/1011/60",
+        name: 'Jones',
+        phone: '982-014',
+        address: { city: 'New Jersy' },
+        photo: 'https://picsum.photos/id/1011/60',
       },
       {
         id: 3,
-        name: "Allen",
-        phone: "889-921",
-        address: { city: "London" },
-        photo: "https://picsum.photos/id/1012/60",
+        name: 'Allen',
+        phone: '889-921',
+        address: { city: 'London' },
+        photo: 'https://picsum.photos/id/1012/60',
       },
       {
         id: 4,
-        name: "James",
+        name: 'James',
         phone: null,
-        address: { city: "Berlin" },
-        photo: "https://picsum.photos/id/1013/60",
+        address: { city: 'Berlin' },
+        photo: 'https://picsum.photos/id/1013/60',
       },
       {
         id: 5,
-        name: "John",
+        name: 'John',
         phone: null,
-        address: { city: "New York" },
-        photo: "https://picsum.photos/id/1014/60",
+        address: { city: 'New York' },
+        photo: 'https://picsum.photos/id/1014/60',
       },
     ],
+  // eslint-disable-next-line linebreak-style
   };
 
+  // eslint-disable-next-line react/sort-comp
   render() {
     return (
       <div>
@@ -74,20 +83,23 @@ export default class CustomersList extends Component {
     );
   }
 
-  //Executes when the user clicks on Refresh button
+  // eslint-disable-next-line no-trailing-spaces
+  
   onRefreshClick = () => {
-    //Update the state using setState method - so that react updates the Browser DOM automatically
     this.setState({ customersCount: 7 });
   };
 
   getPhoneToRender = (phone) => {
     if (phone) return phone;
+    // eslint-disable-next-line no-else-return
     else {
       return <div className="bg-warning p-2 text-center">No Phone</div>;
     }
   };
 
+  // eslint-disable-next-line arrow-body-style
   getCustomerRow = () => {
+    // eslint-disable-next-line arrow-body-style
     return this.state.customers.map((cust, index) => {
       return (
         <tr key={cust.id}>
@@ -113,17 +125,10 @@ export default class CustomersList extends Component {
     });
   };
 
-  //Executes when the user clicks on "Change Picture" button in the grid
-  //Receives the "customer" object and index of the currently clicked customer
   onChangePictureClick = (cust, index) => {
-    //console.log(cust);
-    //console.log(index);
-
-    //get existing customers
+    // eslint-disable-next-line no-var, react/no-access-state-in-setstate
     var custArr = this.state.customers;
-    custArr[index].photo = "https://picsum.photos/id/104/60";
-
-    //update "customers" array in the state
+    custArr[index].photo = 'https://picsum.photos/id/104/60';
     this.setState({ customers: custArr });
   };
 }

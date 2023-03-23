@@ -1,11 +1,22 @@
-import React, { Component } from "react";
+/* eslint-disable no-console */
+/* eslint-disable no-var */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable linebreak-style */
+/* eslint-disable react/button-has-type */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable linebreak-style */
 
+import React, { Component } from 'react';
+
+// eslint-disable-next-line react/prefer-stateless-function
 export default class Login extends Component {
+  // eslint-disable-next-line react/state-in-constructor
   constructor(props) {
     super(props);
-    this.state = { email: "", password: "", message: "" };
+    this.state = { email: '', password: '', message: '' };
   }
 
+  // eslint-disable-next-line react/sort-comp
   render() {
     return (
       <div>
@@ -48,27 +59,27 @@ export default class Login extends Component {
         </div>
       </div>
     );
-  } //end of render
+  }
 
-  //Executes when the user clicks on Login
   onLoginClick = async () => {
+    // eslint-disable-next-line no-console
     console.log(this.state);
 
+    // eslint-disable-next-line vars-on-top
     var response = await fetch(
       `http://localhost:5000/users?email=${this.state.email}&password=${this.state.password}`,
-      { method: "GET" }
+      // eslint-disable-next-line comma-dangle
+      { method: 'GET' }
     );
-
+    // eslint-disable-next-line vars-on-top
     var body = await response.json();
     console.log(body);
 
     if (body.length > 0) {
-      //success
       this.setState({
         message: <span className="text-success">Successfully Logged-in</span>,
       });
     } else {
-      //error
       this.setState({
         message: (
           <span className="text-danger">Invalid login, please try again</span>
