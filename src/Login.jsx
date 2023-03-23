@@ -1,6 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-var */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable linebreak-style */
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/destructuring-assignment */
